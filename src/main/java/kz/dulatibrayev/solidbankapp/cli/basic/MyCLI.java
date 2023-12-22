@@ -6,10 +6,15 @@ import kz.dulatibrayev.solidbankapp.cli.interfaces.CLIUI;
 import kz.dulatibrayev.solidbankapp.interfaces.AccountType;
 
 public class MyCLI implements CLIUI {
-	Scanner scanner;
+	private Scanner scanner;
 
 	public MyCLI(Scanner scanner) {
+		this.scanner = scanner;
 
+	}
+
+	public MyCLI() {
+		this.scanner = new Scanner(System.in);
 	}
 
 	double requestClientAmount() {
@@ -20,7 +25,7 @@ public class MyCLI implements CLIUI {
 		return null;
 	}
 
-	AccountType requestAccountType() {
+	public AccountType requestAccountType() {
 		return null;
 	}
 

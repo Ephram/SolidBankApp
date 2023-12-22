@@ -1,16 +1,19 @@
 package kz.dulatibrayev.solidbankapp.cli.basic;
 
-import kz.dulatibrayev.solidbankapp.basic.BankCore;
+import kz.dulatibrayev.solidbankapp.BankCore;
 import kz.dulatibrayev.solidbankapp.cli.interfaces.CreateAccountOperationUI;
-import kz.dulatibrayev.solidbankapp.interfaces.AccountListtingService;
+import kz.dulatibrayev.solidbankapp.interfaces.AccountListingService;
 
 public class AccountBasicCLI {
-	CreateAccountOperationUI createAccountOperationUI;
-	BankCore bankCore;
-	AccountListtingService accountListing;
+	private CreateAccountOperationUI createAccountOperationUI;
+	private BankCore bankCore;
+	private AccountListingService accountListing;
 
 	public AccountBasicCLI(CreateAccountOperationUI accountOperationUI, BankCore bankCore,
-			AccountListtingService accountListtingService) {
+			AccountListingService accountListingService) {
+		this.createAccountOperationUI = accountOperationUI;
+		this.bankCore = bankCore;
+		this.accountListing = accountListingService;
 
 	}
 
@@ -21,6 +24,5 @@ public class AccountBasicCLI {
 	void getAccounts(String clientID) {
 
 	}
-	
-	
+
 }

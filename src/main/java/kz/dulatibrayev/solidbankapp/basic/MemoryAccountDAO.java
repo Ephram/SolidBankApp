@@ -10,20 +10,19 @@ public class MemoryAccountDAO implements AccountDAO {
 
 	@Override
 	public List<Account> getClientAccounts(String clientID) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void createNewAccount(Account account) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void updateAccount(Account account) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

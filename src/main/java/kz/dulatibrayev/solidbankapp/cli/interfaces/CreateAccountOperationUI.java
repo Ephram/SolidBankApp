@@ -1,5 +1,9 @@
 package kz.dulatibrayev.solidbankapp.cli.interfaces;
 
-public interface CreateAccountOperationUI extends CLIUI {
+import kz.dulatibrayev.solidbankapp.interfaces.AccountType;
+
+public interface CreateAccountOperationUI {
+
+	public AccountType requestAccountType();
 
 }
