@@ -3,6 +3,7 @@ package kz.dulatibrayev.solidbankapp.cli.basic;
 import kz.dulatibrayev.solidbankapp.BankCore;
 import kz.dulatibrayev.solidbankapp.cli.interfaces.CreateAccountOperationUI;
 import kz.dulatibrayev.solidbankapp.interfaces.AccountListingService;
+import kz.dulatibrayev.solidbankapp.interfaces.AccountType;
 
 public class AccountBasicCLI {
 	private CreateAccountOperationUI createAccountOperationUI;
@@ -17,11 +18,13 @@ public class AccountBasicCLI {
 
 	}
 
-	void createAccountRequest(String clientID) {
-
+	public void createAccountRequest(String clientID) {
+		AccountType accountType = this.createAccountOperationUI.requestAccountType();
+		this.bankCore.createNewAccount(accountType, clientID);
 	}
 
-	void getAccounts(String clientID) {
+	public void getAccounts(String clientID) {
+		this.accountListing.getClientAccounts(clientID);
 
 	}
 

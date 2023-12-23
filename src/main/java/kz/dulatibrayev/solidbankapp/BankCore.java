@@ -13,16 +13,16 @@ public class BankCore {
 
 	}
 
-	void createNewAccount(AccountType accountType, String clientID) {
-		
+	public void createNewAccount(AccountType accountType, String clientID) {
+		accountCreation.create(accountType, Long.toString(id), clientID, lastAccountNumber);
+		incrementLastAccountNumber();
 	}
 
-	void incrementLastAccountNumber() {
+	public void incrementLastAccountNumber() {
+		this.lastAccountNumber++;
 
 	}
-	
-	
-	
+
 	public static long getId() {
 		return id;
 	}

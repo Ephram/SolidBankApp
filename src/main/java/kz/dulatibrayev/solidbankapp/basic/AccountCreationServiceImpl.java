@@ -12,8 +12,22 @@ public class AccountCreationServiceImpl implements AccountCreationService {
 	}
 
 	@Override
-	public void create(AccountType accountType, long bankID, String clientID, long accountID) {
-		// TODO Auto-generated method stub
+	public void create(AccountType accountType, String bankID, String clientID, long accountID) {
+
+		switch (accountType) {
+		case CHECKING:
+			accountDAO.createNewAccount(new CheckingAccount(accountType, bankID, clientID, 0.0, true));
+			break;
+		case SAVING:
+			accountDAO.createNewAccount(new SavingAccount(accountType, bankID, clientID, 0.0, true));
+			break;
+		case FIXED:
+			accountDAO.createNewAccount(new FixedAccount(accountType, bankID, clientID, 0.0, false));
+			break;
+		default:
+			System.out.println("wrong input");
+			break;
+		}
 
 	}
 
