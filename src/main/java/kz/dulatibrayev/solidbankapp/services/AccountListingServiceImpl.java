@@ -1,14 +1,20 @@
-package kz.dulatibrayev.solidbankapp.basic;
+package kz.dulatibrayev.solidbankapp.services;
 
 import java.util.List;
 
-import kz.dulatibrayev.solidbankapp.interfaces.AccountDAO;
-import kz.dulatibrayev.solidbankapp.interfaces.AccountListingService;
-import kz.dulatibrayev.solidbankapp.interfaces.AccountType;
+import kz.dulatibrayev.solidbankapp.account.Account;
+import kz.dulatibrayev.solidbankapp.account.AccountWithdraw;
+import kz.dulatibrayev.solidbankapp.dao.AccountDAO;
+import kz.dulatibrayev.solidbankapp.enums.AccountType;
+import kz.dulatibrayev.solidbankapp.services.interfaces.AccountListingService;
 
 public class AccountListingServiceImpl implements AccountListingService {
 	private AccountDAO accountDAO;
-
+	
+	public AccountListingServiceImpl(AccountDAO accountDAO) {
+		this.accountDAO=accountDAO;
+	}
+	
 	@Override
 	public Account getClientAccount(String clientID, String accountID) {
 		// TODO Auto-generated method stub
@@ -40,5 +46,7 @@ public class AccountListingServiceImpl implements AccountListingService {
 	public void setAccountDAO(AccountDAO accountDAO) {
 		this.accountDAO = accountDAO;
 	}
+	
+	
 
 }

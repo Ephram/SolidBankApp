@@ -1,7 +1,7 @@
-package kz.dulatibrayev.solidbankapp;
+package kz.dulatibrayev.solidbankapp.app;
 
-import kz.dulatibrayev.solidbankapp.interfaces.AccountCreationService;
-import kz.dulatibrayev.solidbankapp.interfaces.AccountType;
+import kz.dulatibrayev.solidbankapp.enums.AccountType;
+import kz.dulatibrayev.solidbankapp.services.interfaces.AccountCreationService;
 
 public class BankCore {
 	private static long id = 1;

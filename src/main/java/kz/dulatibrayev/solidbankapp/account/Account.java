@@ -1,6 +1,6 @@
-package kz.dulatibrayev.solidbankapp.basic;
+package kz.dulatibrayev.solidbankapp.account;
 
-import kz.dulatibrayev.solidbankapp.interfaces.AccountType;
+import kz.dulatibrayev.solidbankapp.enums.AccountType;
 
 public class Account {
 	private AccountType accountType;

@@ -1,8 +1,11 @@
-package kz.dulatibrayev.solidbankapp.basic;
+package kz.dulatibrayev.solidbankapp.services;
 
-import kz.dulatibrayev.solidbankapp.interfaces.AccountCreationService;
-import kz.dulatibrayev.solidbankapp.interfaces.AccountDAO;
-import kz.dulatibrayev.solidbankapp.interfaces.AccountType;
+import kz.dulatibrayev.solidbankapp.account.CheckingAccount;
+import kz.dulatibrayev.solidbankapp.account.FixedAccount;
+import kz.dulatibrayev.solidbankapp.account.SavingAccount;
+import kz.dulatibrayev.solidbankapp.dao.AccountDAO;
+import kz.dulatibrayev.solidbankapp.enums.AccountType;
+import kz.dulatibrayev.solidbankapp.services.interfaces.AccountCreationService;
 
 public class AccountCreationServiceImpl implements AccountCreationService {
 	private AccountDAO accountDAO;

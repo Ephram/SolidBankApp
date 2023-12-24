@@ -1,9 +1,10 @@
-package kz.dulatibrayev.solidbankapp.interfaces;
+package kz.dulatibrayev.solidbankapp.services.interfaces;
 
 import java.util.List;
 
-import kz.dulatibrayev.solidbankapp.basic.Account;
-import kz.dulatibrayev.solidbankapp.basic.AccountWithdraw;
+import kz.dulatibrayev.solidbankapp.account.Account;
+import kz.dulatibrayev.solidbankapp.account.AccountWithdraw;
+import kz.dulatibrayev.solidbankapp.enums.AccountType;
 
 public interface AccountListingService {
 	

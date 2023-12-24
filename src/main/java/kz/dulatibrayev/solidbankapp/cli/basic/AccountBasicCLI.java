@@ -1,9 +1,9 @@
 package kz.dulatibrayev.solidbankapp.cli.basic;
 
-import kz.dulatibrayev.solidbankapp.BankCore;
+import kz.dulatibrayev.solidbankapp.app.BankCore;
 import kz.dulatibrayev.solidbankapp.cli.interfaces.CreateAccountOperationUI;
-import kz.dulatibrayev.solidbankapp.interfaces.AccountListingService;
-import kz.dulatibrayev.solidbankapp.interfaces.AccountType;
+import kz.dulatibrayev.solidbankapp.enums.AccountType;
+import kz.dulatibrayev.solidbankapp.services.interfaces.AccountListingService;
 
 public class AccountBasicCLI {
 	private CreateAccountOperationUI createAccountOperationUI;
@@ -24,7 +24,8 @@ public class AccountBasicCLI {
 	}
 
 	public void getAccounts(String clientID) {
-		this.accountListing.getClientAccounts(clientID);
+		System.out.println(this.accountListing.getClientAccounts(clientID));
+		
 
 	}
 

@@ -1,4 +1,4 @@
-package kz.dulatibrayev.solidbankapp;
+package kz.dulatibrayev.solidbankapp.app;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
