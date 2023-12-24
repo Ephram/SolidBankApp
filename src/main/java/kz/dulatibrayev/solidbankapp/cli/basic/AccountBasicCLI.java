@@ -20,12 +20,15 @@ public class AccountBasicCLI {
 
 	public void createAccountRequest(String clientID) {
 		AccountType accountType = this.createAccountOperationUI.requestAccountType();
-		this.bankCore.createNewAccount(accountType, clientID);
+		if (accountType != null) {
+			this.bankCore.createNewAccount(accountType, clientID);
+
+		}
+
 	}
 
 	public void getAccounts(String clientID) {
 		System.out.println(this.accountListing.getClientAccounts(clientID));
-		
 
 	}
 

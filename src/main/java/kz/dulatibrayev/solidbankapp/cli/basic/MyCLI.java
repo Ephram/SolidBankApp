@@ -2,6 +2,9 @@ package kz.dulatibrayev.solidbankapp.cli.basic;
 
 import java.util.Scanner;
 
+import org.springframework.boot.autoconfigure.web.WebProperties.Resources.Chain.Strategy.Fixed;
+
+import kz.dulatibrayev.solidbankapp.account.Account;
 import kz.dulatibrayev.solidbankapp.cli.interfaces.CLIUI;
 import kz.dulatibrayev.solidbankapp.enums.AccountType;
 
@@ -26,7 +29,20 @@ public class MyCLI implements CLIUI {
 	}
 
 	public AccountType requestAccountType() {
-		return AccountType.valueOf(scanner.nextLine());
+
+		String accountType = scanner.nextLine();
+
+		if (accountType.equalsIgnoreCase(AccountType.FIXED.toString())) {
+			return AccountType.FIXED;
+		} else if (accountType.equalsIgnoreCase(AccountType.SAVING.toString())) {
+			return AccountType.SAVING;
+		} else if (accountType.equalsIgnoreCase(AccountType.CHECKING.toString())) {
+			return AccountType.CHECKING;
+		} else {
+			System.out.println("wrong type of account, try again");
+			return null;
+		}
+
 	}
 
 	public Scanner getScanner() {
