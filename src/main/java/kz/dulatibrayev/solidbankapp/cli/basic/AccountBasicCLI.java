@@ -22,7 +22,7 @@ public class AccountBasicCLI {
 		AccountType accountType = this.createAccountOperationUI.requestAccountType();
 		if (accountType != null) {
 			this.bankCore.createNewAccount(accountType, clientID);
-
+			System.out.println(accountType.toString() + " account successfully created" );
 		}
 
 	}
