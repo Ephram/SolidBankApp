@@ -1,17 +1,26 @@
 # SolidBankApp
 Демо проект Solidbank app
 
-для запуска программы вы должны запустить проект в IDE c класса SOLIDBANKAPPLICATION.java 
-после запуска программа выведет вам информацию в консоль с возможными сценариями исполнения 
+1. **Show Accounts (Показать список счетов)**
+- Display the list of accounts associated with the account.
 
-1 - show accounts
-2 - create account
-6 - help message
-7 - exit
+2. **Create Account (Создание счета)**
+- Create a new account. Supported account types: SAVING, FIXED, CHECKING.
 
-1 - показать список счетов у аккаунта
-2 - создание счета, варианты счетов которые принимаются SAVING - FIXED - CHECKING
-6 - показывает меню выбора
-7 - выход из программы
+6. **Help Message (Показать меню выбора)**
+- Display the menu with available options.
+
+7. **Exit (Выход из программы)**
+- Exit the program.
+
+## Example Scenario
+
+1. Run the program.
+2. Choose option 1 to show existing accounts.
+3. Choose option 2 to create a new account.
+4. Follow the prompts to provide necessary information.
+5. Explore other options as needed.
+
+
 
 
