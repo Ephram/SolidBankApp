@@ -1,6 +1,22 @@
 # SolidBankApp
 Демо проект Solidbank app
 
+## Overview
+
+This is a demo project for the Solidbank app. The application provides basic functionalities related to managing accounts. To run the program, follow the instructions below.
+
+## Getting Started
+### Prerequisites
+- Java Development Kit (JDK)
+- Integrated Development Environment (IDE)
+### Running the Program
+
+1. Open the project in your preferred IDE.
+2. Locate the main class: `SOLIDBANKAPPLICATION.java`.
+3. Run the `SOLIDBANKAPPLICATION.java` class.
+4. The program will output information to the console with possible execution scenarios:
+
+
 1. **Show Accounts (Показать список счетов)**
 - Display the list of accounts associated with the account.
 
