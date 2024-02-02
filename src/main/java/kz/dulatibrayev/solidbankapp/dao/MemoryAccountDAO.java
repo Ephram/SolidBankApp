@@ -9,14 +9,21 @@ import kz.dulatibrayev.solidbankapp.enums.AccountType;
 
 public class MemoryAccountDAO implements AccountDAO {
 	private List<Account> accountList = new ArrayList<Account>();
-	
+
 	public MemoryAccountDAO() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
 	public List<Account> getClientAccounts(String clientID) {
-		return this.accountList;
+		List<Account> list = new ArrayList<Account>();
+
+		for (Account account : accountList) {
+			if (account.getClientID().equalsIgnoreCase(clientID)) {
+				list.add(account);
+			}
+		}
+		return list;
 	}
 
 	@Override

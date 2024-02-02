@@ -8,15 +8,20 @@ public class Account {
 	private String clientID;
 	private double balance;
 	private boolean withdrawAllowed;
+	private String accountNumber;
 
 	public double getBalance() {
 		return balance;
 	}
 
+	private void format() {
+		accountNumber = String.format("%03d%06d", 1, Integer.valueOf(id));
+	}
+
 	@Override
 	public String toString() {
-		return "Account [accountType=" + accountType + ", id=" + id + ", clientID=" + clientID + ", balance=" + balance
-				+ ", withdrawAllowed=" + withdrawAllowed + "]";
+
+		return "Account [id=" + accountNumber + ", clientID=" + clientID + ", balance=" + balance + "]";
 	}
 
 	public String getClientID() {
@@ -33,6 +38,7 @@ public class Account {
 		this.clientID = clientID;
 		this.balance = balance;
 		this.withdrawAllowed = withdrawAllowed;
+		format();
 	}
 
 	public boolean isWithdrawAllowed() {
